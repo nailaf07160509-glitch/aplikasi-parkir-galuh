@@ -1,0 +1,1198 @@
+
+/* =====================================
+   PENGATURAN DASAR
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #334155;
+    font-size: 14px;
+}
+
+/* =====================================
+   NAVBAR ADMIN DAN OWNER
+===================================== */
+
+.app-navbar {
+    height: 58px;
+    background: #252930;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 22px;
+}
+
+.app-brand {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.app-user {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.app-user form {
+    margin: 0;
+}
+
+.app-logout {
+    background: #dc2626;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 13px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.app-logout:hover {
+    background: #b91c1c;
+}
+
+/* =====================================
+   SIDEBAR ADMIN DAN OWNER
+===================================== */
+
+.app-layout {
+    display: flex;
+    min-height: calc(100vh - 58px);
+}
+
+.app-sidebar {
+    width: 205px;
+    min-width: 205px;
+    background: white;
+    border-right: 1px solid #e2e8f0;
+    padding: 22px 14px;
+}
+
+.app-sidebar h6 {
+    font-size: 13px;
+    color: #64748b;
+    margin: 0 0 15px 8px;
+}
+
+.app-sidebar a {
+    display: block;
+    padding: 10px 12px;
+    margin-bottom: 5px;
+    color: #334155;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.app-sidebar a:hover {
+    background: #eaf1ff;
+    color: #2563eb;
+}
+
+/* =====================================
+   KONTEN ADMIN DAN OWNER
+===================================== */
+
+.app-main {
+    flex: 1;
+    min-width: 0;
+    padding: 25px;
+    overflow-x: auto;
+}
+
+.app-main h1,
+.app-main h2 {
+    color: #1e293b;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.app-main p {
+    font-size: 13px;
+}
+
+/* =====================================
+   CARD UMUM
+===================================== */
+
+.app-main .card {
+    background: white;
+    color: #334155;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.app-main .card h3,
+.app-main .card h5 {
+    color: #1e293b;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.app-main .card p {
+    color: #64748b;
+    margin-bottom: 14px;
+}
+
+/* =====================================
+   DASHBOARD OWNER
+===================================== */
+
+.owner-dashboard {
+    width: 100%;
+    color: #334155;
+}
+
+.owner-dashboard .dashboard-title {
+    font-size: 23px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 5px;
+}
+
+.owner-dashboard .dashboard-subtitle {
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 22px;
+}
+
+/* KARTU OWNER */
+
+.owner-dashboard .owner-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.owner-dashboard .owner-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.owner-dashboard .owner-card h3 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #64748b;
+    margin-bottom: 12px;
+}
+
+.owner-dashboard .owner-card .angka {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1e293b;
+}
+
+/* REKAP OWNER */
+
+.owner-dashboard .rekap-box {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+    padding: 20px;
+}
+
+.owner-dashboard .rekap-title {
+    font-size: 17px;
+    color: #1e293b;
+    margin-bottom: 18px;
+}
+
+/* FILTER TANGGAL */
+
+.owner-dashboard .owner-filter {
+    display: flex;
+    align-items: end;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.owner-dashboard .filter-item {
+    width: 190px;
+}
+
+.owner-dashboard .filter-item label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 6px;
+    color: #475569;
+}
+
+.owner-dashboard .filter-item input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.owner-dashboard .filter-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.owner-dashboard .btn-filter,
+.owner-dashboard .btn-reset {
+    padding: 9px 15px;
+    border-radius: 5px;
+    font-size: 12px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.owner-dashboard .btn-filter {
+    background: #2563eb;
+    color: white;
+    border: none;
+}
+
+.owner-dashboard .btn-reset {
+    background: #e2e8f0;
+    color: #334155;
+}
+
+.owner-dashboard .pendapatan {
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+/* =====================================
+   TABEL OWNER DAN ADMIN
+===================================== */
+
+.app-main table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-top: 12px;
+}
+
+.app-main th,
+.app-main td {
+    padding: 10px 12px;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+    font-size: 12px;
+}
+
+.app-main th {
+    background: #1e293b;
+    color: white;
+}
+
+.app-main tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+/* TABEL OWNER */
+
+.owner-dashboard .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.owner-dashboard .owner-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-top: 10px;
+}
+
+.owner-dashboard .owner-table th {
+    background: #1e293b;
+    color: white;
+    padding: 11px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.owner-dashboard .owner-table td {
+    padding: 11px;
+    font-size: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.owner-dashboard .empty-data {
+    text-align: center;
+    color: #64748b;
+    padding: 20px;
+}
+
+.owner-dashboard .owner-pagination {
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+/* =====================================
+   FORM ADMIN DAN OWNER
+===================================== */
+
+.app-main input,
+.app-main select,
+.app-main textarea {
+    max-width: 100%;
+    padding: 9px 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.app-main input:focus,
+.app-main select:focus,
+.app-main textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37,99,235,0.1);
+}
+
+/* =====================================
+   HALAMAN PETUGAS
+===================================== */
+
+.sidebar {
+    width: 210px;
+    height: 100vh;
+    background: #252930;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 22px 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h2 {
+    color: white;
+    font-size: 19px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.sidebar a {
+    display: block;
+    color: #cbd5e1;
+    text-decoration: none;
+    padding: 11px 12px;
+    margin-bottom: 6px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.sidebar a:hover {
+    background: #343b46;
+    color: white;
+}
+
+.sidebar form {
+    margin-top: auto;
+}
+
+.sidebar button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #dc2626;
+    color: white;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.content {
+    margin-left: 210px;
+    padding: 28px;
+    min-height: 100vh;
+}
+
+.content h1 {
+    font-size: 23px;
+    margin-bottom: 10px;
+    color: #1e293b;
+}
+
+/* KARTU PETUGAS */
+
+.content .card {
+    background: white;
+    color: #334155;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.content .card h3 {
+    color: #1e293b;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.content .card p {
+    color: #64748b;
+    margin-bottom: 15px;
+}
+
+/* =====================================
+   HALAMAN DATA TARIF DAN DATA LAINNYA
+===================================== */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 22px;
+    color: #1e293b;
+}
+
+.header p {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.add {
+    display: inline-block;
+    padding: 9px 14px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.add:hover {
+    background: #1d4ed8;
+}
+
+/* TOMBOL AKSI */
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.actions form {
+    margin: 0;
+}
+
+.actions .edit,
+.actions .delete {
+    display: inline-block;
+    padding: 7px 11px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.actions .edit {
+    background: #2563eb;
+    color: white;
+}
+
+.actions .delete {
+    background: #dc2626;
+    color: white;
+}
+
+/* PESAN */
+
+.success {
+    background: #dcfce7;
+    color: #166534;
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.error {
+    background: #fee2e2;
+    color: #991b1b;
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+/* TOMBOL KEMBALI */
+
+.back {
+    display: inline-block;
+    margin-top: 18px;
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.back:hover {
+    text-decoration: underline;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 768px) {
+
+    .app-sidebar {
+        width: 150px;
+        min-width: 150px;
+    }
+
+    .app-main {
+        padding: 15px;
+    }
+
+    .app-user {
+        gap: 8px;
+        font-size: 12px;
+    }
+
+    .owner-dashboard .owner-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .owner-dashboard .filter-item {
+        width: 100%;
+    }
+
+    .owner-dashboard .rekap-box {
+        padding: 13px;
+    }
+
+    .sidebar {
+        width: 170px;
+    }
+
+    .content {
+        margin-left: 170px;
+        padding: 18px;
+    }
+
+    .header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+/* =====================================
+   FORM INPUT DATA - DESAIN BARU
+===================================== */
+
+.app-main form:not(.actions form) {
+    max-width: 650px;
+}
+
+.app-main form label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 6px;
+}
+
+.app-main form input,
+.app-main form select,
+.app-main form textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-height: 39px;
+    padding: 9px 12px;
+    margin-bottom: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background: #fff;
+    color: #334155;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.app-main form textarea {
+    min-height: 85px;
+    resize: vertical;
+}
+
+.app-main form input:focus,
+.app-main form select:focus,
+.app-main form textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+.app-main form button,
+.app-main form .btn {
+    padding: 9px 18px;
+    border: none;
+    border-radius: 6px;
+    background: #2563eb;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.app-main form button:hover,
+.app-main form .btn:hover {
+    background: #1d4ed8;
+}
+
+/* =====================================
+   FORM TAMBAH DATA ADMIN
+===================================== */
+
+.form-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    background: #f1f5f9;
+}
+
+.form-card {
+    width: 100%;
+    max-width: 480px;
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+.form-header {
+    margin-bottom: 25px;
+}
+
+.form-header h2 {
+    font-size: 21px;
+    color: #1e293b;
+    margin-bottom: 7px;
+}
+
+.form-header p {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    height: 42px;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 13px;
+    background: #fff;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.10);
+}
+
+.form-group small {
+    display: block;
+    margin-top: 7px;
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.form-buttons button,
+.form-buttons a {
+    padding: 10px 17px;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form-buttons button {
+    background: #2563eb;
+    color: white;
+}
+
+.form-buttons button:hover {
+    background: #1d4ed8;
+}
+
+.form-buttons button:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+}
+
+.form-buttons .btn-back {
+    background: #e2e8f0;
+    color: #334155;
+}
+
+.form-buttons .btn-back:hover {
+    background: #cbd5e1;
+}
+
+.form-card .error {
+    font-size: 12px;
+    margin-bottom: 18px;
+}
+
+@media (max-width: 500px) {
+    .form-card {
+        padding: 20px;
+    }
+
+    .form-buttons {
+        flex-direction: column-reverse;
+    }
+
+    .form-buttons button,
+    .form-buttons a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* =====================================
+   HALAMAN DATA AREA PARKIR
+===================================== */
+
+.data-page {
+    min-height: 100vh;
+    padding: 35px;
+    background: #f1f5f9;
+}
+
+.data-card {
+    width: 100%;
+    background: white;
+    padding: 25px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+}
+
+.data-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.data-header h2 {
+    font-size: 21px;
+    color: #1e293b;
+    margin-bottom: 6px;
+}
+
+.data-header p {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.btn-add {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.btn-add:hover {
+    background: #1d4ed8;
+}
+
+.data-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.data-table th {
+    background: #1e293b;
+    color: white;
+    padding: 13px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.data-table td {
+    padding: 13px 12px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #475569;
+    font-size: 12px;
+}
+
+.data-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+.data-actions {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.data-actions form {
+    margin: 0;
+}
+
+.btn-edit,
+.btn-delete {
+    display: inline-block;
+    padding: 7px 11px;
+    border: none;
+    border-radius: 5px;
+    font-size: 11px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-edit {
+    background: #2563eb;
+    color: white;
+}
+
+.btn-edit:hover {
+    background: #1d4ed8;
+}
+
+.btn-delete {
+    background: #dc2626;
+    color: white;
+}
+
+.btn-delete:hover {
+    background: #b91c1c;
+}
+
+.data-table .empty-data {
+    text-align: center;
+    padding: 25px;
+    color: #94a3b8;
+}
+
+.data-pagination {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.data-back {
+    display: inline-block;
+    margin-top: 20px;
+    color: #2563eb;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.data-back:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .data-page {
+        padding: 15px;
+    }
+
+    .data-card {
+        padding: 15px;
+    }
+
+    .data-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .data-table th,
+    .data-table td {
+        padding: 10px;
+    }
+}
+
+/* =====================================
+   FORM EDIT TARIF PARKIR
+===================================== */
+
+.tarif-form-page {
+    display: flex;
+    justify-content: center;
+    padding: 25px 15px;
+    width: 100%;
+}
+
+.tarif-form-card {
+    width: 100%;
+    max-width: 480px;
+    background: white;
+    padding: 26px;
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+}
+
+.tarif-form-header {
+    margin-bottom: 25px;
+}
+
+.tarif-form-header h3 {
+    font-size: 19px;
+    color: #1e293b;
+    margin-bottom: 7px;
+}
+
+.tarif-form-header p {
+    font-size: 12px;
+    color: #64748b;
+}
+
+.tarif-form-card .form-group {
+    margin-bottom: 20px;
+}
+
+.tarif-form-card .form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+.tarif-form-card .form-group input,
+.tarif-form-card .form-group select {
+    width: 100%;
+    height: 41px;
+    padding: 9px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 13px;
+    background: white;
+}
+
+.tarif-form-card .form-group input:focus,
+.tarif-form-card .form-group select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.10);
+}
+
+.tarif-form-card .form-group small {
+    display: block;
+    margin-top: 7px;
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+.tarif-form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.tarif-form-buttons button,
+.tarif-form-buttons a {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.tarif-form-buttons button {
+    background: #2563eb;
+    color: white;
+}
+
+.tarif-form-buttons button:hover {
+    background: #1d4ed8;
+}
+
+.tarif-form-buttons .tarif-btn-back {
+    background: #e2e8f0;
+    color: #334155;
+}
+
+.tarif-form-buttons .tarif-btn-back:hover {
+    background: #cbd5e1;
+}
+
+
+/* =====================================
+   BADGE ROLE DAN STATUS USER
+===================================== */
+
+.user-role {
+    display: inline-block;
+    padding: 5px 11px;
+    border-radius: 5px;
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.user-status-active {
+    display: inline-block;
+    padding: 5px 11px;
+    border-radius: 5px;
+    background: #dcfce7;
+    color: #15803d;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.user-status-inactive {
+    display: inline-block;
+    padding: 5px 11px;
+    border-radius: 5px;
+    background: #fee2e2;
+    color: #dc2626;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* =====================================
+   DASHBOARD PETUGAS
+===================================== */
+
+.petugas-menu-section {
+    margin-top: 30px;
+}
+
+.petugas-section-header {
+    margin-bottom: 20px;
+}
+
+.petugas-section-header h3 {
+    font-size: 19px;
+    color: #1e293b;
+    margin-bottom: 6px;
+}
+
+.petugas-section-header p {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.petugas-menu-section .actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.petugas-menu-section .action-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+    transition: 0.2s ease;
+}
+
+.petugas-menu-section .action-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.07);
+}
+
+.action-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dbeafe;
+    color: #2563eb;
+    border-radius: 9px;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.petugas-menu-section .action-card h3 {
+    font-size: 17px;
+    color: #1e293b;
+    margin-bottom: 9px;
+}
+
+.petugas-menu-section .action-card p {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.petugas-menu-section .action-card a {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #454a53;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.petugas-menu-section .action-card a:hover {
+    background: #1d253b;
+}
+
+@media (max-width: 700px) {
+    .petugas-menu-section .actions {
+        grid-template-columns: 1fr;
+    }
+}
+
